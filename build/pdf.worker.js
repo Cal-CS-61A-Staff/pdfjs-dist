@@ -3665,11 +3665,13 @@ class PDFDocument {
     let hash;
     const idArray = this.xref.trailer.get("ID");
 
-    if (Array.isArray(idArray) && idArray[0] && (0, _util.isString)(idArray[0]) && idArray[0] !== EMPTY_FINGERPRINT) {
-      hash = (0, _util.stringToBytes)(idArray[0]);
-    } else {
-      hash = (0, _crypto.calculateMD5)(this.stream.getByteRange(0, FINGERPRINT_FIRST_BYTES), 0, FINGERPRINT_FIRST_BYTES);
-    }
+    // if (Array.isArray(idArray) && idArray[0] && (0, _util.isString)(idArray[0]) && idArray[0] !== EMPTY_FINGERPRINT) {
+    //   hash = (0, _util.stringToBytes)(idArray[0]);
+    // } else {
+    //   hash = (0, _crypto.calculateMD5)(this.stream.getByteRange(0, FINGERPRINT_FIRST_BYTES), 0, FINGERPRINT_FIRST_BYTES);
+    // }
+
+    const hash = "826ad6b0338304c40b42644b5144f80a";
 
     const fingerprintBuf = [];
 
