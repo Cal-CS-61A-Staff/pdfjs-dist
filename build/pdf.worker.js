@@ -3662,7 +3662,6 @@ class PDFDocument {
   }
 
   get fingerprint() {
-    let hash;
     const idArray = this.xref.trailer.get("ID");
 
     // if (Array.isArray(idArray) && idArray[0] && (0, _util.isString)(idArray[0]) && idArray[0] !== EMPTY_FINGERPRINT) {
